@@ -1,0 +1,61 @@
+<div class="wrapper">
+  <div class="filter">
+    <div class="filter__inputs">
+      <input class="filter__input text-input" id="name" placeholder="Поиск по имени" [(ngModel)]="nameSearch"
+        (change)="changeNameSearch()"
+      >
+    </div>
+  </div>
+  <div class="filter">
+    <div class="filter__inputs">
+      <input class="filter__input" type="date" id="name" [(ngModel)]="fromDate"
+        (change)="changeFromDate()"
+      >
+      <input class="filter__input" type="date" id="name" [(ngModel)]="toDate"
+        (change)="changeToDate()"
+      >
+    </div>
+  </div>
+  <div class="clear-button">
+    <button class="clear-button__item" (click)="clearFiltersStudents()">Очистить фильтр</button>
+  </div>
+</div>
+
+<div class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>City</th>
+        <th>Sex</th>
+        <th>Mobile</th>
+        <th>Additional</th>
+        <th>Additional</th>
+        <th>Additional</th>
+        <th>Additional</th>
+        <th>Additional</th>
+        <th>Additional</th>
+        <th>Additional</th>
+        <th>Additional</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students | namesearch:nameSearch | birthdaysearch: fromDate : toDate">
+        <td >{{student.Name}}</td>
+        <td>{{student.Birthday | date: 'dd.MM.yyyy'}}</td>
+        <td>{{student.City}}</td>
+        <td>{{student.Sex}}</td>
+        <td>{{student.Mobile}}</td>
+        <td>Additional</td>
+        <td>Additional</td>
+        <td>Additional</td>
+        <td>Additional</td>
+        <td>Additional</td>
+        <td>Additional</td>
+        <td>Additional</td>
+        <td>Additional</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

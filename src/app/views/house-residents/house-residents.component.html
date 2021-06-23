@@ -1,0 +1,56 @@
+
+<div class="wrapper">
+  <div class="filter">
+    <div class="filter__inputs">
+      <input class="filter__input text-input" id="name" placeholder="Поиск по имени" [(ngModel)]="surnameSearch"
+        (change)="changeSurnameSearch()"
+      >
+    </div>
+  </div>
+  <div class="filter">
+    <div class="filter__inputs">
+      <input class="filter__input" type="date" id="name" [(ngModel)]="fromCheckInDate"
+        (change)="changeFromCheckInDate()"
+      >
+      <input class="filter__input" type="date" id="name" [(ngModel)]="toCheckInDate"
+        (change)="changeToCheckInDate()"
+      >
+    </div>
+  </div>
+  <div class="clear-button">
+    <button class="clear-button__item" (click)="clearFiltersHouseResidents()">Очистить фильтр</button>
+  </div>
+</div>
+
+<div class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Surname</th>
+        <th>Check in date</th>
+        <th>Persons quantity</th>
+        <th>Floor number</th>
+        <th>Apartment number</th>
+        <th>Mobile</th>
+        <th>Apartment area</th>
+        <th>Pin</th>
+        <th>Serial number</th>
+        <th>PId</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let houseResident of houseResidents | surnamesearch:surnameSearch | checkindatesearch: fromCheckInDate : toCheckInDate">
+        <td >{{houseResident.Surname}}</td>
+        <td>{{houseResident.CheckInDate | date: 'dd.MM.yyyy'}}</td>
+        <td>{{houseResident.PersonsQuantity}}</td>
+        <td>{{houseResident.FloorNumber}}</td>
+        <td>{{houseResident.ApartmentNumber}}</td>
+        <td>{{houseResident.Mobile}}</td>
+        <td>{{houseResident.ApartmentArea}}</td>
+        <td>{{houseResident.Pin}}</td>
+        <td>{{houseResident.SerialNumber}}</td>
+        <td>{{houseResident.PId}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

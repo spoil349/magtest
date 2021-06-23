@@ -1,1 +1,123 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+button,
+button:active,
+button:focus,
+mat-icon {
+  outline: none;
+}
+p {
+  margin: 0 !important;
+}
+mat-toolbar {
+  justify-content: space-between;
+  align-items: center;
+}
+.buttons-container {
+  display: flex;
+  align-items: center;
+}
+
+.buttons-container__item:first-child {
+  margin-right: 15px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.filter {
+  display: flex;
+  padding: 30px;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.filter__inputs {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1;
+  height: 100%;
+}
+
+.filter__input {
+  flex: 1;
+}
+
+.text-input {
+  padding: 5px 10px;
+}
+
+.filter__button {
+  width: 85px;
+}
+
+.clear-button {
+  padding: 30px;
+  display: flex;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.clear-button__item {
+  width: 100%;
+}
+
+.table {
+  max-width: 60%;
+  max-height: 60vh;
+  margin: 0 auto;
+  overflow: scroll;
+  position: relative;
+}
+
+table {
+  position: relative;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 30px 30px;
+  width: 200px;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: #3f51b5;
+  color: #fff;
+}
+
+thead th:first-child {
+  left: 0;
+  z-index: 1;
+}
+
+thead th:nth-child(2) {
+  left: 10%;
+  z-index: 1;
+}
+
+tbody td:first-child,
+tbody td:nth-child(2) {
+  position: sticky;
+  left: 0;
+  background: #fff;
+  border-right: 1px solid #ccc;
+}
+
+tbody td:nth-child(2) {
+  left: 10%;
+}

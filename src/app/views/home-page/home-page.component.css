@@ -1,0 +1,43 @@
+.card {
+  margin: 150px;
+}
+.card > div {
+  padding: 20px 35px;
+}
+.card__header {
+  background-color: #3f51b5;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.card__header-text {
+  margin: 0;
+  font-weight: bold;
+}
+.card__body {
+  border: 1px solid #ccc;
+  border-top: none;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.card__block:not(:last-child) {
+  margin-bottom: 30px;
+}
+.card__block-item:not(:last-child),
+.card__contact:not(:last-child) {
+  margin-bottom: 15px !important;
+}
+h2 {
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+.card__contact {
+  display: flex;
+}
+
+.card__contact p {
+  margin-right: 10px !important;
+}
